@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Resultado</title>
+</head>
+
+<body>
+    
+    <h1>Menú</h1>
+	<ul>
+		<li><a href="ultimo">Mostrar Último Producto</a></li>
+		<li><a href="volver">Volver</a></li>
+	</ul>
+
+<h3>Lista de Productos</h3>
+<br>
+			<div>
+				<table>
+				    <tr>
+				      <th>Codigo Producto</th>
+				      <th>Nombre</th>
+				      <th>Precio</th>
+				      <th>Marca</th>
+				      <th>Stock</th>				      
+				    </tr>
+					<tr th:each="p : ${productos}">
+						<td th:text="${p.codigoP}"></td>
+						<td th:text="${p.nombreP}"></td>
+						<td th:text="${p.precioP}"></td>
+						<td th:text="${p.marcaP}"></td>
+						<td th:text="${p.stockP}"></td>
+					</tr>
+				</table>
+			</div>
+</body>
+
+</html>
